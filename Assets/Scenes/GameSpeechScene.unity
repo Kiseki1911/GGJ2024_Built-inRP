@@ -558,7 +558,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &23138175
 GameObject:
@@ -2548,7 +2548,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287508640
 GameObject:
@@ -6359,6 +6359,50 @@ CapsuleCollider:
   m_Height: 20.050373
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 9.025187, z: -0.00000011920929}
+--- !u!1 &1180807757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180807759}
+  - component: {fileID: 1180807758}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1180807758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180807757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa3e47877ff2d4429e73de1867ba74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1180807759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180807757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188132041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8181,8 +8225,14 @@ GameObject:
   - component: {fileID: 1592457214}
   - component: {fileID: 1592457213}
   - component: {fileID: 1592457215}
+  - component: {fileID: 1592457221}
+  - component: {fileID: 1592457220}
+  - component: {fileID: 1592457219}
+  - component: {fileID: 1592457218}
+  - component: {fileID: 1592457217}
+  - component: {fileID: 1592457216}
   m_Layer: 0
-  m_Name: Goals
+  m_Name: GoalInvader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8202,14 +8252,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress: 0
   fulfilled: 0
-  description: Move with WASD
+  description: 'Try W/A/S/D to move around! '
   goalType: 0
   goalOwner: 1
   needInFrame: 1
   targetObj: {fileID: 0}
   needInvaderIn: 0
   needInvaderState: []
-  startTime: 5
+  startTime: 0
   timeNeeded: 1
   minZoom: 1
   axis:
@@ -8244,9 +8294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress: 0
   fulfilled: 0
-  description: Move with WASD
+  description: Jump pose by pressing space
   goalType: 0
-  goalOwner: 0
+  goalOwner: 1
   needInFrame: 1
   targetObj: {fileID: 0}
   needInvaderIn: 0
@@ -8255,8 +8305,163 @@ MonoBehaviour:
   timeNeeded: 1
   minZoom: 1
   axis:
-  - Horizontal
-  - Vertical
+  - Jump
+--- !u!114 &1592457216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Now try a jump pose with the president on camera!
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 1
+  targetObj: {fileID: 1595028894}
+  needInvaderIn: 1
+  needInvaderState:
+  - Jump
+  startTime: 35
+  timeNeeded: 0.5
+  minZoom: 1
+  axis: []
+--- !u!114 &1592457217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Try a fun swooshing-in attack on air
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 0
+  targetObj: {fileID: 0}
+  needInvaderIn: 1
+  needInvaderState:
+  - LftSwoosh
+  - RhtSwoosh
+  startTime: 30
+  timeNeeded: 0.5
+  minZoom: 1
+  axis: []
+--- !u!114 &1592457218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Get in the frame with the President themselves, we know you want to
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 1
+  targetObj: {fileID: 1595028894}
+  needInvaderIn: 1
+  needInvaderState: []
+  startTime: 25
+  timeNeeded: 2
+  minZoom: 1
+  axis: []
+--- !u!114 &1592457219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: 'Time for your best jump pose on camera : )'
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 0
+  targetObj: {fileID: 0}
+  needInvaderIn: 1
+  needInvaderState:
+  - Jump
+  startTime: 20
+  timeNeeded: 0.5
+  minZoom: 1
+  axis: []
+--- !u!114 &1592457220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: "It\u2019s air time! Get on the TV broadcast for 20 seconds"
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 0
+  targetObj: {fileID: 0}
+  needInvaderIn: 1
+  needInvaderState: []
+  startTime: 15
+  timeNeeded: 20
+  minZoom: 1
+  axis: []
+--- !u!114 &1592457221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592457212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Swoosh-in with Shift-A/Shift-D
+  goalType: 1
+  goalOwner: 1
+  needInFrame: 0
+  targetObj: {fileID: 0}
+  needInvaderIn: 0
+  needInvaderState:
+  - LftSwoosh
+  - RhtSwoosh
+  startTime: 10
+  timeNeeded: 0.1
+  minZoom: 1
+  axis: []
 --- !u!1 &1595028894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1219688677344628363, guid: 350d8c2149590af4fbb8f1e2b98ec0f5, type: 3}
@@ -9853,7 +10058,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972305784
 GameObject:
@@ -11079,7 +11284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579021442249587351, guid: 65448f7aba473c444b2d4f14f638f046, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7579021442249587351, guid: 65448f7aba473c444b2d4f14f638f046, type: 3}
       propertyPath: m_LocalPosition.x
