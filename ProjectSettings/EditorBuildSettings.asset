@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 46b55e1bb64e342469ca097cee417704
   - enabled: 1
+    path: Assets/Scenes/GameSpeechScene.unity
+    guid: a82a7e2303ce95545a0cbc665ca3aaff
+  - enabled: 0
     path: Assets/GameplayTestScene.unity
     guid: 1c5228e3ebf0d4c499af914a1e3b9adc
+  - enabled: 1
+    path: Assets/Scenes/ReplayVideoScene.unity
+    guid: 72638465fe9834dbaac7eab5490aa9ae
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 3dbd6a8cb920c44f78b1af916b101f83
   m_configObjects: {}
