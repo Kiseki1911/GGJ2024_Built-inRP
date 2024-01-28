@@ -32,7 +32,8 @@ public class CameraRecorder : MonoBehaviour
 
     public void StartRecording()
     {
-        cam = GameObject.Find("CameraMan_Cam").GetComponent<Camera>();
+        //cam = GameObject.Find("CameraMan_Cam").GetComponent<Camera>();
+        recorder_.cam_ = cam;
         //if (recorder_.State == RecorderState.IDLE) {
         VideoParams vParams = new VideoParams(30, 4000000, cam.pixelWidth, cam.pixelHeight, "vflip");
         AudioParams aParams = new AudioParams(AudioSettings.outputSampleRate, 320000, string.Empty, AudioSettings.speakerMode);

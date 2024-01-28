@@ -40,7 +40,7 @@ namespace UnityMediaRecorder {
     }
 
     // Unity references
-    private Camera cam_;
+    public Camera cam_;
     private AudioListener mainAudioListener_;
     private AudioListener recAudioListener_;
 
@@ -66,7 +66,7 @@ namespace UnityMediaRecorder {
     }
 
     private void Awake() {
-      cam_ = this.GetComponent<Camera>();
+      //cam_ = this.GetComponent<Camera>();
       mainAudioListener_ = FindObjectOfType<AudioListener>();
       recAudioListener_ = this.GetOrAddComponent<AudioListener>();
       if (mainAudioListener_ == null) {
