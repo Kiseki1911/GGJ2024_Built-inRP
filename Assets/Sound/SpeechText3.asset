@@ -15,6 +15,26 @@ MonoBehaviour:
   voiceLines: {fileID: 8300000, guid: 58c8c37bdda27434c9145b19936913df, type: 3}
   textLines:
   - line: Today I have an important announcement to share with this nation.
-    timeInSec: 5.2
-  - line: Today I have an important announcement to share with this nation.
-    timeInSec: 4.8
+    timeInSec: 3.5
+  - line: I was fired as the 110th president of the United States of Antarctica
+    timeInSec: 5
+  - line: Yes. Terminated. Let go. Removed. Dismissed. Axed.
+    timeInSec: 3.2
+  - line: I was fired for reasons, including, but not limited to
+    timeInSec: 3.1
+  - line: 'failing the grand TikTok Renegade, Renegade Challenge. Renegade? Yes,
+      the Renegade. '
+    timeInSec: 4
+  - line: My incapability of dancing in front of the camera put us as a nation to
+      shame.
+    timeInSec: 4.2
+  - line: I would like to sincerely apologize for my mistake.
+    timeInSec: 3
+  - line: My successor, Capybara, will take on the position to carry this nation
+      forward.
+    timeInSec: 5.5
+  - line: Capybara, as you all know, is an innovative but adorable, determined but
+      physically-flexible,
+    timeInSec: 5.5
+  - line: intelligent but oh-so-cute leader. Everyone, give capybara a round of applause.
+    timeInSec: 5

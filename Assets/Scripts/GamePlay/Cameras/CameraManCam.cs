@@ -9,7 +9,7 @@ public class CameraManCam : MonoBehaviour
     public float basicFoV = 50f;
     public float zoom = 1f;
     Camera cam;
-
+    GameObject glitchImage;
     public float leftClickDownTime = 0f;
     public float zoomInStartTime = 1f;
     public float zoomInRatio = 0.5f;
@@ -21,6 +21,8 @@ public class CameraManCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        glitchImage = GameObject.Find("GlitchImage");
+        glitchImage.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cam = GetComponent<Camera>();
@@ -44,6 +46,9 @@ public class CameraManCam : MonoBehaviour
             leftClickDownTime += Time.deltaTime;
         else
             leftClickDownTime = 0f;
+
+
+        glitchImage.SetActive(Input.GetMouseButton(1));
 
         if (leftClickDownTime > zoomInStartTime)
             zoom += zoomInRatio * Time.deltaTime;
