@@ -35,7 +35,7 @@ public class CameraRecorder : MonoBehaviour
         //if (recorder_.State == RecorderState.IDLE) {
         VideoParams vParams = new VideoParams(30, 4000000, cam.pixelWidth, cam.pixelHeight, "vflip");
         AudioParams aParams = new AudioParams(AudioSettings.outputSampleRate, 320000, string.Empty, AudioSettings.speakerMode);
-        string filename = Path.Combine("Assets/Videos/SampleRecordings");
+        string filename = Path.Combine("Assets/Resources/Videos/SampleRecordings");
         // Path.Combine(
         //   Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),
         //   DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString());
