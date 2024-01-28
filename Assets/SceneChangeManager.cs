@@ -10,6 +10,7 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
     private double lastInterval;
     private int frames;
     private float fps;
+    public int winner;
 
     private enum SceneState
     {
@@ -49,7 +50,7 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
         secondsPlayed += Time.deltaTime;
 
         // Check if the current scene is StartScene and 5 seconds have passed
-        if (currentSceneState == SceneState.StartScene && secondsPlayed >= 5.0f)
+        if (currentSceneState == SceneState.StartScene && secondsPlayed >= 30.0f)
         {
             // Change to the GameSpeechScene
             ChangeScene();
