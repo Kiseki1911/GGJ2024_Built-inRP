@@ -13,4 +13,27 @@ MonoBehaviour:
   m_Name: SpeechText2
   m_EditorClassIdentifier: 
   voiceLines: {fileID: 8300000, guid: 593ea331e8026e54aa1e174619010003, type: 3}
-  textLines: []
+  textLines:
+  - line: Vice President, Mr. Speaker, Senators, and Representatives, hear me you
+      must
+    timeInSec: 5.5
+  - line: Yesterday, December 7, 1941, a date in infamy to live it will
+    timeInSec: 4.5
+  - line: the United States of Antarctica, declare the end of all wars, we did
+    timeInSec: 5
+  - line: Yes, not just one war, but all, any war
+    timeInSec: 4
+  - line: Achieved the end of wars, we have, by banning the use of the word, "war"
+    timeInSec: 4
+  - line: Instead, "love" the word, we shall use. Fabulous, the word love is
+    timeInSec: 5
+  - line: Love, love, love, the word love, we do love. Close to the third world love,
+      we are
+    timeInSec: 5
+  - line: In the second year of war, oh, of lovemaking I mean, Russia and Ukraine
+      are
+    timeInSec: 5.5
+  - line: A love affair, China is about to launch, with you-know-who
+    timeInSec: 3.5
+  - line: All around us, love is. Wa la la
+    timeInSec: 3
