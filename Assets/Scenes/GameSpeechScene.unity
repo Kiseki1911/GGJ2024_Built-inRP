@@ -249,7 +249,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &10727334
 GameObject:
@@ -6508,7 +6508,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188132041
 PrefabInstance:
@@ -10011,7 +10011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969406301}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
   m_Name: 
@@ -10021,7 +10021,7 @@ MonoBehaviour:
   description: 'Now zoom in to find the little kid listening in the crowd '
   goalType: 1
   goalOwner: 0
-  needInFrame: 0
+  needInFrame: 1
   targetObj: {fileID: 604191619}
   needInvaderIn: 0
   needInvaderState: []
@@ -10046,7 +10046,7 @@ MonoBehaviour:
   description: Time for a close-up on the president!
   goalType: 1
   goalOwner: 0
-  needInFrame: 0
+  needInFrame: 1
   targetObj: {fileID: 1595028894}
   needInvaderIn: 0
   needInvaderState: []
@@ -10071,7 +10071,7 @@ MonoBehaviour:
   description: Now try to get a view of the crowd on the left
   goalType: 1
   goalOwner: 0
-  needInFrame: 0
+  needInFrame: 1
   targetObj: {fileID: 965656900}
   needInvaderIn: 0
   needInvaderState: []
@@ -10096,7 +10096,7 @@ MonoBehaviour:
   description: Get a view of the crowd on the right!
   goalType: 1
   goalOwner: 0
-  needInFrame: 0
+  needInFrame: 1
   targetObj: {fileID: 1760448304}
   needInvaderIn: 0
   needInvaderState: []
@@ -10121,7 +10121,7 @@ MonoBehaviour:
   description: "Also: Don\u2019t forget you need to have the president in frame!"
   goalType: 1
   goalOwner: 0
-  needInFrame: 0
+  needInFrame: 1
   targetObj: {fileID: 1595028894}
   needInvaderIn: 0
   needInvaderState: []
@@ -10195,7 +10195,7 @@ MonoBehaviour:
   progress: 0
   fulfilled: 0
   description: Press LMB to zoom in, release to snap back
-  goalType: 0
+  goalType: 1
   goalOwner: 0
   needInFrame: 1
   targetObj: {fileID: 0}
@@ -10203,9 +10203,8 @@ MonoBehaviour:
   needInvaderState: []
   startTime: 5
   timeNeeded: 1
-  minZoom: 1
-  axis:
-  - Fire1
+  minZoom: 1.1
+  axis: []
 --- !u!114 &1969406310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10246,7 +10245,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972305784
 GameObject:
