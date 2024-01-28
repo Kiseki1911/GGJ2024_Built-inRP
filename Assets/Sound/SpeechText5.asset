@@ -13,4 +13,26 @@ MonoBehaviour:
   m_Name: SpeechText5
   m_EditorClassIdentifier: 
   voiceLines: {fileID: 8300000, guid: e8d0a22a8fb6f0246bc19c5b29121215, type: 3}
-  textLines: []
+  textLines:
+  - line: Greeting, my citizens! Today, we are announcing a great step in the evolution
+      of our education system.
+    timeInSec: 6
+  - line: Naruto, the anime and manga, is going to replace Bible as the mandatory
+      text, for all students.
+    timeInSec: 6.5
+  - line: Yes, Naruto for all. Holy Naruto. Hallelujah Naruto!
+    timeInSec: 5
+  - line: Sasuke, the son, the father, the holy spirit, the omnipotent one. Praise
+      to him. Cough.
+    timeInSec: 6.2
+  - line: Naruto, the saint and inviolable classic, has been impacting generations
+      after generations.
+    timeInSec: 6.3
+  - line: It has truthfully turned everyone in this country into better people.
+    timeInSec: 3.2
+  - line: "I\u2019m more than delighted to command that Naruto watching comprehension"
+    timeInSec: 3.3
+  - line: become the mandatary exercise with Sasuke becoming our national ambassador.
+    timeInSec: 5.5
+  - line: Let us praise the power of Naruto, Amenaruto!
+    timeInSec: 3
