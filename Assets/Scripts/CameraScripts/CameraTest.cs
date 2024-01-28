@@ -9,19 +9,20 @@ using UnityMediaRecorder;
 public class CameraTest : MonoBehaviour
 {
     private RecorderBehaviour recorder_;
+    Camera camera;
     // Start is called before the first frame update
     void Start()
     {
         recorder_ = this.GetOrAddComponent<RecorderBehaviour>();
-
+        camera = GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        VideoParams vParams = new VideoParams(30, 4000000, 512, 512, "vflip");
+        VideoParams vParams = new VideoParams(30, 4000000, camera.pixelWidth, camera.pixelHeight, "vflip");
         AudioParams aParams = new AudioParams(AudioSettings.outputSampleRate, 320000, string.Empty, AudioSettings.speakerMode);
-        string filename = Path.Combine(Application.dataPath, "..", "SampleRecordings");
+        string filename = Path.Combine("Assets/Videos/SampleRecordings");
         // Path.Combine(
         //   Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),
         //   DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString());
@@ -29,9 +30,9 @@ public class CameraTest : MonoBehaviour
         recorder_.StartRecording(recOpts).HandleAsyncExceptions();
 
 
-        float sine = Mathf.Sin(0.5f * Mathf.PI * Time.time);
-        transform.position = new Vector3(5f * sine, 0f, 0f);
-        transform.rotation = Quaternion.Euler(20f * sine, 0f, 0f);
+        // float sine = Mathf.Sin(0.5f * Mathf.PI * Time.time);
+        // transform.position = new Vector3(5f * sine, 0f, 0f);
+        // transform.rotation = Quaternion.Euler(20f * sine, 0f, 0f);
     }
     private void OnDisable()
     {
