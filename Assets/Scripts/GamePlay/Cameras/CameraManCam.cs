@@ -10,6 +10,10 @@ public class CameraManCam : MonoBehaviour
     public float zoom = 1f;
     Camera cam;
     GameObject glitchImage;
+    AudioClip beepClip;
+    public float glitchOnTime = 0.5f;
+    public float glitchCD = 2f;
+    float lastGlitchClickTime = -10f;
     public float leftClickDownTime = 0f;
     public float zoomInStartTime = 1f;
     public float zoomInRatio = 0.5f;
@@ -22,12 +26,28 @@ public class CameraManCam : MonoBehaviour
     void Start()
     {
         glitchImage = GameObject.Find("GlitchImage");
+        beepClip = Resources.Load<AudioClip>("beep");
         glitchImage.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cam = GetComponent<Camera>();
         basicFoV = cam.fieldOfView;
     }
+
+
+    void Glitch()
+	{
+        if (Time.time < lastGlitchClickTime + glitchCD)
+            return;
+        lastGlitchClickTime = Time.time;
+
+        //Play Sound
+        var obj = new GameObject();
+        Destroy(obj, 0.5f);
+        var au = obj.AddComponent<AudioSource>();
+        au.clip = beepClip;
+        au.Play();
+	}
 
     // Update is called once per frame
     void Update()
@@ -48,7 +68,10 @@ public class CameraManCam : MonoBehaviour
             leftClickDownTime = 0f;
 
 
-        glitchImage.SetActive(Input.GetMouseButton(1));
+        if (Input.GetMouseButtonDown(1))
+            Glitch();
+
+        glitchImage.SetActive(lastGlitchClickTime + glitchOnTime >= Time.time);
 
         if (leftClickDownTime > zoomInStartTime)
             zoom += zoomInRatio * Time.deltaTime;
