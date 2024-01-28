@@ -34,7 +34,7 @@ public class Goal : MonoBehaviour
     public float timeNeeded = 1f;
     float curTime = 0f;
     public float minZoom = 1f;
-
+    float sceneStartTime;
 
 
     [Header("Interact (tutorial)")]
@@ -48,6 +48,7 @@ public class Goal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneStartTime = Time.time;
         if (!GoalUIPrefab)
             GoalUIPrefab = Resources.Load<GameObject>("Prefabs/GoalUI");
 
@@ -124,7 +125,7 @@ public class Goal : MonoBehaviour
     {
         if(!started)
 		{
-            if(Time.time >= startTime)
+            if(Time.time >= startTime + sceneStartTime)
 			{
                 started = true;
                 OnStarted();
