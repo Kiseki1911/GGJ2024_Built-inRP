@@ -17,6 +17,7 @@ public class CameraManCam : MonoBehaviour
     public Vector3 basicRot;
     Vector3 rotation;
 
+    float waitTime = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,11 @@ public class CameraManCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(waitTime <= 2f)
+		{
+            waitTime += Time.deltaTime;
+            return;
+		}
         float moveX = Input.GetAxis("Mouse X") * sensiX * Time.deltaTime;
         float moveY = Input.GetAxis("Mouse Y") * sensiY * Time.deltaTime;
         rotation += new Vector3(moveY, moveX, 0f);

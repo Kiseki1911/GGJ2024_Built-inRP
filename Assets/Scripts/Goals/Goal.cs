@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    static GameObject GoalUIPrefab;
     public enum GoalType { Interact, Frame};
     public enum GoalOwner { CameraMan, Invader };
     public float progress = 0f;
@@ -42,7 +43,8 @@ public class Goal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!GoalUIPrefab)
+            GoalUIPrefab = Resources.Load<GameObject>("Prefabs/GoalUI");
 
         switch (goalType)
         {
@@ -59,6 +61,8 @@ public class Goal : MonoBehaviour
 
     bool CheckInFrame(GameObject obj)
     {
+        if (!obj)
+            return true;
         bounds = obj.GetComponent<Collider>().bounds;
         cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
         return GeometryUtility.TestPlanesAABB(cameraFrustum, bounds);
@@ -66,6 +70,21 @@ public class Goal : MonoBehaviour
 
     void OnStarted()
     {
+        GameObject parentObj = null;
+        switch (goalOwner)
+        {
+            case GoalOwner.CameraMan:
+                parentObj = GameObject.Find("CameraManGoalPanel");
+                break;
+            case GoalOwner.Invader:
+                parentObj = GameObject.Find("InvaderGoalPanel");
+                break;
+        }
+        var goalUIObj = GameObject.Instantiate(GoalUIPrefab, parentObj.transform);
+        //goalUIObj.transform.SetAsLastSibling();
+        var goalUI = goalUIObj.GetComponent<GoalUI>();
+        goalUI.goal = this;
+
         Debug.Log("Goal Started!");
     }
     void OnFulfill()
@@ -93,7 +112,7 @@ public class Goal : MonoBehaviour
             switch (goalType)
             {
                 case GoalType.Frame:
-                    if (CheckInFrame(targetObj) == needInFrame)
+                    if ((!targetObj) || CheckInFrame(targetObj) == needInFrame)
                     {
                         if (needInvaderIn && !CheckInFrame(invaderObj))
                             break;
