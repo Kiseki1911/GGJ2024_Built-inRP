@@ -18,5 +18,7 @@ public class GoalUI : MonoBehaviour
     void Update()
     {
         progressImage.rectTransform.sizeDelta = new Vector2(progressMaxWidth * Mathf.Clamp01(goal.progress), 15f);
+        if (goal.fulfilled)
+            Destroy(gameObject, 3f);
     }
 }

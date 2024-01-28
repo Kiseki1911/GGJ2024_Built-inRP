@@ -11080,7 +11080,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &546999337
 PrefabInstance:
@@ -11970,7 +11970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &587333858
 PrefabInstance:
@@ -17572,7 +17572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &846232293
 PrefabInstance:
@@ -18935,6 +18935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camObject: {fileID: 407959055}
   vel: 5
+  invaderAnim: {fileID: 0}
 --- !u!1001 &918622301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20441,7 +20442,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992561764
 PrefabInstance:
@@ -32204,7 +32205,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476179229}
-  - component: {fileID: 1476179228}
   - component: {fileID: 1476179230}
   - component: {fileID: 1476179231}
   m_Layer: 0
@@ -32214,33 +32214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1476179228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476179227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progress: 0
-  fulfilled: 0
-  description: Move with WASD
-  goalType: 0
-  goalOwner: 1
-  needInFrame: 0
-  targetObj: {fileID: 1818401458}
-  needInvaderIn: 0
-  needInvaderState: 
-  startTime: 3
-  timeNeeded: 1
-  minZoom: 2
-  axis:
-  - Horizontal
-  - Vertical
 --- !u!4 &1476179229
 Transform:
   m_ObjectHideFlags: 0
@@ -32276,7 +32249,7 @@ MonoBehaviour:
   needInFrame: 1
   targetObj: {fileID: 1818401458}
   needInvaderIn: 0
-  needInvaderState: 
+  needInvaderState: []
   startTime: 1
   timeNeeded: 1
   minZoom: 2
@@ -32295,13 +32268,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress: 0
   fulfilled: 0
-  description: Get in frame for 3 sec.
+  description: Get in frame for 3 sec. with Dash
   goalType: 1
   goalOwner: 1
   needInFrame: 0
   targetObj: {fileID: 0}
   needInvaderIn: 1
-  needInvaderState: 
+  needInvaderState:
+  - LftSwoosh
+  - RhtSwoosh
   startTime: 7
   timeNeeded: 3
   minZoom: 0
@@ -44282,7 +44257,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1998109980
 MonoBehaviour:
@@ -47638,7 +47613,7 @@ RectTransform:
   - {fileID: 605629754}
   - {fileID: 680503010}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
