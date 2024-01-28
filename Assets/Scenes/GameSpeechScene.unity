@@ -2637,6 +2637,10 @@ MonoBehaviour:
   lineCounter: 0
   paragraphs:
   - {fileID: 11400000, guid: 82da1ead796518045971ab885aa35f51, type: 2}
+  - {fileID: 11400000, guid: f9b7bc44d6aa1aa4486d5aacf08fa927, type: 2}
+  - {fileID: 11400000, guid: 4d4411c2781f24443b118c6a7b6a4d50, type: 2}
+  - {fileID: 11400000, guid: 54273cc04dd5547439a3fb5311f8196a, type: 2}
+  - {fileID: 11400000, guid: 887490a121427a84388dd9a1da9311f6, type: 2}
 --- !u!4 &276469765
 Transform:
   m_ObjectHideFlags: 0
@@ -6490,6 +6494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa3e47877ff2d4429e73de1867ba74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameTotalTime: 50
 --- !u!4 &1180807759
 Transform:
   m_ObjectHideFlags: 0
