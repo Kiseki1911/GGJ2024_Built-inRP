@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeManager : Singleton<SceneChangeManager>
 {
+    public int winner = 0;
+
     private enum SceneState
     {
         StartScene,
@@ -12,6 +14,7 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
         ReplayVideoScene,
         VictoryScene
     }
+
 
     private SceneState currentSceneState;
     public bool switchScene; // Declare the switchScene variable
