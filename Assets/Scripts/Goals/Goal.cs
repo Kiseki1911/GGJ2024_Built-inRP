@@ -110,7 +110,10 @@ public class Goal : MonoBehaviour
 	{
         if (needInvaderState.Count == 0)
             return true;
-        string state = invaderAnim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        var c = invaderAnim.GetCurrentAnimatorClipInfo(0);
+        if (c.Length <= 0)
+            return false;
+        string state = c[0].clip.name;
         Debug.Log("State = " + state);
         return needInvaderState.Contains(state);
 
