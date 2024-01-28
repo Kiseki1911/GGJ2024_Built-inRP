@@ -18,10 +18,11 @@ public class VideoManager : MonoBehaviour
     void Start()
     {
         videoReady = false;
-        videoPlayer.clip = (VideoClip)Resources.Load("Videos/SampleRecordings");
         StartCoroutine(PlayVideo());
     }
     IEnumerator PlayVideo(){
+        yield return new WaitForSeconds(3);
+        videoPlayer.clip = (VideoClip)Resources.Load("Videos/SampleRecordings");
         videoPlayer.Prepare();
         yield return new WaitForSeconds(delayInSec);
         while(!videoPlayer.isPrepared){
@@ -36,8 +37,8 @@ public class VideoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.enabled = videoPlayer.isPlaying;
-        if(Input.GetKeyDown(KeyCode.Space)){
+        text.text = videoPlayer.isPlaying? "Press [BACK SPACE] to skip": "Waiting for video...";
+        if(Input.GetKeyDown(KeyCode.Backspace)){
 
             SceneChangeManager.Instance.switchScene = true;
         }
