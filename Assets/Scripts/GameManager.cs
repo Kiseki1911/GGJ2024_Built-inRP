@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public float gameTotalTime = 50f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class GameManager : Singleton<GameManager>
     }
     IEnumerator GameTimer()
     {
-        yield return new WaitForSeconds(45);
+        yield return new WaitForSeconds(gameTotalTime);
         End();
     }
 }

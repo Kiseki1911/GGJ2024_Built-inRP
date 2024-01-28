@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -9,13 +10,15 @@ public class VideoManager : MonoBehaviour
     public float delayInSec;
     public RawImage img;
     public VideoPlayer videoPlayer;
-    public AudioSource source;
+    bool videoReady = false;
+    public TMP_Text text;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //source.clip
+        videoReady = false;
+        videoPlayer.clip = (VideoClip)Resources.Load("Videos/SampleRecordings");
         StartCoroutine(PlayVideo());
     }
     IEnumerator PlayVideo(){
@@ -26,13 +29,17 @@ public class VideoManager : MonoBehaviour
             break;
         }
         img.texture = videoPlayer.texture;
+        videoReady = true;
         videoPlayer.Play();
-        source.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.enabled = videoPlayer.isPlaying;
+        if(Input.GetKeyDown(KeyCode.Space)){
+
+            SceneChangeManager.Instance.switchScene = true;
+        }
     }
 }
