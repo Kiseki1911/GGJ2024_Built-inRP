@@ -7753,6 +7753,11 @@ MonoBehaviour:
   axis:
   - Horizontal
   - Vertical
+--- !u!1 &1595028894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1219688677344628363, guid: 350d8c2149590af4fbb8f1e2b98ec0f5, type: 3}
+  m_PrefabInstance: {fileID: 1445610340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1642495663
 GameObject:
   m_ObjectHideFlags: 0
@@ -9534,6 +9539,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3927616193817063094, guid: 350d8c2149590af4fbb8f1e2b98ec0f5, type: 3}
   m_PrefabInstance: {fileID: 1445610340}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &2017533776
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595028894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2017895443
 GameObject:
   m_ObjectHideFlags: 0
