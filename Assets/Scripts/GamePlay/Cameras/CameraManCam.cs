@@ -30,7 +30,7 @@ public class CameraManCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(waitTime <= 2f)
+        if(waitTime <= 1f)
 		{
             waitTime += Time.deltaTime;
             return;
