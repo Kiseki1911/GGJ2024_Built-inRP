@@ -9585,6 +9585,275 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1969406301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969406311}
+  - component: {fileID: 1969406310}
+  - component: {fileID: 1969406309}
+  - component: {fileID: 1969406308}
+  - component: {fileID: 1969406307}
+  - component: {fileID: 1969406306}
+  - component: {fileID: 1969406305}
+  - component: {fileID: 1969406304}
+  - component: {fileID: 1969406303}
+  - component: {fileID: 1969406302}
+  m_Layer: 0
+  m_Name: GoalCameraMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1969406302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: 'Now zoom in to find the little kid listening in the crowd '
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 604191619}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 40
+  timeNeeded: 2
+  minZoom: 1
+  axis: []
+--- !u!114 &1969406303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Time for a close-up on the president!
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 1595028894}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 35
+  timeNeeded: 2
+  minZoom: 2
+  axis: []
+--- !u!114 &1969406304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Now try to get a view of the crowd on the left
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 965656900}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 30
+  timeNeeded: 2
+  minZoom: 1
+  axis: []
+--- !u!114 &1969406305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Get a view of the crowd on the right!
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 1760448304}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 25
+  timeNeeded: 2
+  minZoom: 1
+  axis: []
+--- !u!114 &1969406306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: "Also: Don\u2019t forget you need to have the president in frame!"
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 1595028894}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 20
+  timeNeeded: 20
+  minZoom: 1
+  axis: []
+--- !u!114 &1969406307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: 'Try to keep the intruder outside your frame entirely! '
+  goalType: 1
+  goalOwner: 0
+  needInFrame: 0
+  targetObj: {fileID: 1655262094}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 15
+  timeNeeded: 30
+  minZoom: 1
+  axis: []
+--- !u!114 &1969406308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: 'Press RMB to cut away to TV test card. '
+  goalType: 0
+  goalOwner: 0
+  needInFrame: 1
+  targetObj: {fileID: 0}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 10
+  timeNeeded: 1
+  minZoom: 1
+  axis:
+  - Fire2
+--- !u!114 &1969406309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Press LMB to zoom in, release to snap back
+  goalType: 0
+  goalOwner: 0
+  needInFrame: 1
+  targetObj: {fileID: 0}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 5
+  timeNeeded: 1
+  minZoom: 1
+  axis:
+  - Fire1
+--- !u!114 &1969406310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ca4ec9ade92c489c8747f71866950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  fulfilled: 0
+  description: Move mouse to rotate camera
+  goalType: 0
+  goalOwner: 0
+  needInFrame: 1
+  targetObj: {fileID: 0}
+  needInvaderIn: 0
+  needInvaderState: []
+  startTime: 0
+  timeNeeded: 1
+  minZoom: 1
+  axis:
+  - Mouse X
+  - Mouse Y
+--- !u!4 &1969406311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969406301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 586.63916, y: 183.55421, z: 57.652954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972305784
 GameObject:
   m_ObjectHideFlags: 0
