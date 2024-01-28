@@ -9,8 +9,8 @@ public class VictoryManager : MonoBehaviour
     public TMP_Text text;
     private void OnEnable()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         text.text = SceneChangeManager.Instance.winner == 1 ?
             cameraManWins : SceneChangeManager.Instance.winner == -1 ? intruderWins : draw;
     }
