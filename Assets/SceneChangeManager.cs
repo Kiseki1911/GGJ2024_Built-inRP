@@ -29,6 +29,9 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.I)){
+            switchScene = true;
+        }
         if (switchScene)
         {
             switchScene = false; // Reset the switch flag
