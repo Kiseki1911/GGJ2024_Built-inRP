@@ -22,6 +22,7 @@ public class VideoManager : MonoBehaviour
         StartCoroutine(PlayVideo());
     }
     IEnumerator PlayVideo(){
+        yield return new WaitForSeconds(2);
         videoPlayer.Prepare();
         yield return new WaitForSeconds(delayInSec);
         while(!videoPlayer.isPrepared){
@@ -37,7 +38,7 @@ public class VideoManager : MonoBehaviour
     void Update()
     {
         text.enabled = videoPlayer.isPlaying;
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Backspace)){
 
             SceneChangeManager.Instance.switchScene = true;
         }
