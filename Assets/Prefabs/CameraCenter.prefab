@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 2059511679006270172}
   - component: {fileID: 2059511679006270173}
   - component: {fileID: 2059511679006270167}
+  - component: {fileID: 4752324776062860130}
+  - component: {fileID: 5023769588310851037}
   m_Layer: 0
   m_Name: CameraMan_Cam
   m_TagString: MainCamera
@@ -245,3 +247,27 @@ MonoBehaviour:
   zoomInStartTime: 1
   zoomInRatio: 0.5
   basicRot: {x: 0, y: 0, z: 0}
+--- !u!114 &4752324776062860130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059511679006270174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93fcc7da0426554590c20c7f3b7c145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5023769588310851037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059511679006270174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ab48d69b8314c4a82e346a4daecc40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
