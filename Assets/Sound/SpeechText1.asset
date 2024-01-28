@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SpeechText1
   m_EditorClassIdentifier: 
   voiceLines: {fileID: 0}
-  textLines: []
+  textLines:
+  - line: 
+    timeInSec: 0
