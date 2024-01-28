@@ -5,16 +5,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityMediaRecorder.Utils;
 using UnityMediaRecorder;
-[RequireComponent(typeof(RecorderBehaviour), (typeof(Camera)))]
+[RequireComponent((typeof(Camera)))]
 public class CameraRecorder : MonoBehaviour
 {
-    private RecorderBehaviour recorder_;
+    public RecorderBehaviour recorder_;
     public Camera cam;
     bool isRecording;
     // Start is called before the first frame update
     void Start()
     {
-        recorder_ = this.GetComponent<RecorderBehaviour>();
+        //recorder_ = this.GetComponent<RecorderBehaviour>();
         //cam = GetComponent<Camera>();
         isRecording = false;
         StartRecording();
