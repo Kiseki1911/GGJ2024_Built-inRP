@@ -2533,7 +2533,8 @@ MonoBehaviour:
   audioSource: {fileID: 2137137743}
   text: {fileID: 2137137742}
   lineCounter: 0
-  paragraphs: []
+  paragraphs:
+  - {fileID: 11400000, guid: 82da1ead796518045971ab885aa35f51, type: 2}
 --- !u!4 &276469765
 Transform:
   m_ObjectHideFlags: 0

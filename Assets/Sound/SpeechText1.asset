@@ -14,5 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLines: {fileID: 8300000, guid: 2d52a76918b9b804caba21716096414f, type: 3}
   textLines:
-  - line: 
-    timeInSec: 0
+  - line: Today, I am officially declaring a national emergency.
+    timeInSec: 4.5
+  - line: Our country is in a critical state with a dangerous, low amount of rubber
+      duckies.
+    timeInSec: 5.5
+  - line: Yes, rubber duckies, our best friends. How do I take a bath without rubber
+      duckies?
+    timeInSec: 6
+  - line: The global supply of rubber duckies were hijacked by these goddamn crazy
+      pirates.
+    timeInSec: 5
+  - line: The entire 1 million rubber duckies. Just crazy...crazy people!
+    timeInSec: 5
+  - line: We must defend our best duckies, not only the yellow ones,
+    timeInSec: 3.9
+  - line: but also the pink, the blue, and the neon green duckies.
+    timeInSec: 3.9
+  - line: Our friends informed us these pirates will use these duckies as bombs
+    timeInSec: 4.2
+  - line: to harvest jellyfish in the deep ocean. Distasteful!
+    timeInSec: 3.6
+  - line: We must defend ourselves from these terrorists!
+    timeInSec: 3.4
