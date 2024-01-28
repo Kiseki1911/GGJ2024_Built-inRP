@@ -14,7 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLines: {fileID: 8300000, guid: ac6f94cca032d8349ae435d3e7c48494, type: 3}
   textLines:
-  - line: Today I have an important announcement to share with this nation.
+  - line: Today is the ultimate hunger games of our 1000-storey Grand Tower Challenge
+    timeInSec: 5.6
+  - line: where the winner becomes the president, and kick out the old bones, Me.
+    timeInSec: 4.2
+  - line: Kicking me out. I am sacrificing myself for the greater good of the nation.
     timeInSec: 5.2
-  - line: Today I have an important announcement to share with this nation.
-    timeInSec: 4.8
+  - line: The mighty tower, 1000-stories high, is open to anyone who wants a challenge.
+    timeInSec: 6
+  - line: Blood! Yes! Blood is needed!
+    timeInSec: 4
+  - line: Liberty cannot be strived without blood!
+    timeInSec: 4
+  - line: Liberty cannot be strived without blood!
+    timeInSec: 4
+  - line: The desired can never be attained without blood!
+    timeInSec: 5
+  - line: Slaughter everyone standing in your way.
+    timeInSec: 3
+  - line: Reach the top of the Grand Tower and be the bloody president!
+    timeInSec: 4
+  - line: GAGAGAGAGA! Blood GAGA! GAGA! Blood!
+    timeInSec: 4
