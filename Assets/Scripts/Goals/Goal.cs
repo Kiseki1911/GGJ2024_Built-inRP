@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    public static int CameraManGoalFulfilled = 0;
+    public static int InvaderGoalFulfilled = 0;
+
+
     static GameObject GoalUIPrefab;
     public enum GoalType { Interact, Frame};
     public enum GoalOwner { CameraMan, Invader };
@@ -21,8 +25,9 @@ public class Goal : MonoBehaviour
     public bool needInFrame = true; 
     public GameObject targetObj;
     GameObject invaderObj;
+    Animator invaderAnim;
     public bool needInvaderIn = false;
-    public string needInvaderState = "";
+    public List<string> needInvaderState;
 
     public float startTime = 5f;
     bool started = false;
@@ -52,6 +57,7 @@ public class Goal : MonoBehaviour
                 cam = GameObject.Find("CameraMan_Cam").GetComponent<Camera>();
                 cmc = FindObjectOfType<CameraManCam>();
                 invaderObj = GameObject.Find("Invader");
+                invaderAnim = invaderObj.GetComponentInChildren<Animator>();
                 break;
             case GoalType.Interact:
 
@@ -85,11 +91,29 @@ public class Goal : MonoBehaviour
         var goalUI = goalUIObj.GetComponent<GoalUI>();
         goalUI.goal = this;
 
-        Debug.Log("Goal Started!");
     }
     void OnFulfill()
     {
-        Debug.Log("Goal Fulfilled!");
+        switch (goalOwner)
+        {
+            case GoalOwner.CameraMan:
+                CameraManGoalFulfilled++;
+                break;
+            case GoalOwner.Invader:
+                InvaderGoalFulfilled++;
+                break;
+        }
+    }
+
+
+    bool CheckInvaderState()
+	{
+        if (needInvaderState.Count == 0)
+            return true;
+        string state = invaderAnim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        Debug.Log("State = " + state);
+        return needInvaderState.Contains(state);
+
     }
 
     // Update is called once per frame
@@ -120,7 +144,10 @@ public class Goal : MonoBehaviour
                         if (cmc.zoom < minZoom)
                             break;
                         // need to implement: check invader state(pose)
-                        
+
+                        if (!CheckInvaderState())
+                            break;
+
                         progress += Time.deltaTime / timeNeeded;
                     }
                     break;
