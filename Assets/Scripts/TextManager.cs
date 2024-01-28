@@ -1,26 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TextManager : Singleton<TextManager>
 {
+    public float delayInSec = 1f;
+    public AudioSource audioSource;
     public TMP_Text text;
-    public TextLines_SO textLines_SO;
+    private TextLines_SO textLines_SO;
     public int lineCounter;
     IEnumerator inst = null;
+    public List<TextLines_SO> paragraphs = new List<TextLines_SO>();
 
     // Start is called before the first frame update
     void Start()
     {
-        StartParagraph(textLines_SO);
+        StartCoroutine(StartParagraphWithDelay());
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        text.transform.parent.gameObject.SetActive(text.text!="");
+    }
+    public void StartRandomParagraph()
+    {
+        int index = Random.Range(0, paragraphs.Count);
+        StartParagraph(paragraphs[index]);
+        if(paragraphs[index].voiceLines!=null){
+            audioSource.clip = paragraphs[index].voiceLines;
+            audioSource.Play();
+        }
     }
 
     public void StartParagraph(TextLines_SO textLines_SO)
@@ -56,6 +67,12 @@ public class TextManager : Singleton<TextManager>
         yield return new WaitForSeconds(sec);
         lineCounter++;
         NextLine();
+    }
+
+    IEnumerator StartParagraphWithDelay()
+    {
+        yield return new WaitForSeconds(delayInSec);
+        StartRandomParagraph();
     }
 
     private void OnDisable()
