@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System;
+using System.IO;
 
 public class VideoManager : MonoBehaviour
 {
@@ -22,7 +24,7 @@ public class VideoManager : MonoBehaviour
     }
     IEnumerator PlayVideo(){
         yield return new WaitForSeconds(5);
-        videoPlayer.clip = (VideoClip)Resources.Load("Videos/SampleRecordings");
+        videoPlayer.url = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), "GGJ2024_cq.mp4");//(VideoClip)Resources.Load("Videos/SampleRecordings");
         videoPlayer.Prepare();
         yield return new WaitForSeconds(delayInSec);
         while(!videoPlayer.isPrepared){
