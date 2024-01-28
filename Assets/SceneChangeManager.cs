@@ -46,12 +46,12 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
                 currentSceneState = SceneState.ReplayVideoScene;
                 break;
             case SceneState.ReplayVideoScene:
-                SceneManager.LoadScene("ReplayVideoScene", LoadSceneMode.Single);
-                currentSceneState = SceneState.ReplayVideoScene;
+                SceneManager.LoadScene("VictoryScene", LoadSceneMode.Single);
+                currentSceneState = SceneState.VictoryScene;
                 break;
             case SceneState.VictoryScene:
-                SceneManager.LoadScene("StartAnimation", LoadSceneMode.Single);
-                currentSceneState = SceneState.VictoryScene;
+                SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
+                currentSceneState = SceneState.StartScene;
                 break;
             default:
                 Debug.LogError("Unknown Scene State");
