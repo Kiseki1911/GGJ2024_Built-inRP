@@ -445,7 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 84081393d300c4d448168124592e5421, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb761a96dab27f941b62bd2f31c9a831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayInSec: 0
+  delayInSec: 1
   img: {fileID: 888075226}
   videoPlayer: {fileID: 1576720831}
   text: {fileID: 2026872562}
