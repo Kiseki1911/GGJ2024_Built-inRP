@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f0ea4a61ecf59458cb7ddc4aa4ce22, type: 3}
   m_Name: SpeechText1
   m_EditorClassIdentifier: 
-  voiceLines: {fileID: 0}
-  textLines: []
+  voiceLines: {fileID: 8300000, guid: 2d52a76918b9b804caba21716096414f, type: 3}
+  textLines:
+  - line: 
+    timeInSec: 0
