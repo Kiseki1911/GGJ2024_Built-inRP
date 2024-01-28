@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class SceneChangeManager : Singleton<SceneChangeManager>
 {
-    public int winner = 0;
+
+    private double lastInterval;
+    private int frames;
+    private float fps;
 
     private enum SceneState
     {
@@ -18,12 +22,15 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
 
     private SceneState currentSceneState;
     public bool switchScene; // Declare the switchScene variable
+    private float secondsPlayed;
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this);
         currentSceneState = SceneState.StartScene; // Set initial state
+        lastInterval = Time.realtimeSinceStartup;
+        frames = 0;
     }
 
     // Update is called once per frame
@@ -34,6 +41,18 @@ public class SceneChangeManager : Singleton<SceneChangeManager>
             switchScene = false; // Reset the switch flag
             ChangeScene();
         }
+
+        // Increment timer each frame
+        secondsPlayed += Time.deltaTime;
+
+        // Check if the current scene is StartScene and 5 seconds have passed
+        if (currentSceneState == SceneState.StartScene && secondsPlayed >= 5.0f)
+        {
+            // Change to the GameSpeechScene
+            ChangeScene();
+            secondsPlayed = 0; // Reset the timer
+        }
+
     }
 
     private void ChangeScene()
